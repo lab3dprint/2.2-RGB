@@ -21,9 +21,9 @@ class ViewController: UIViewController {
         redSlider.value = 125
         greenSlider.value = 125
         blueSlider.value = 125
-        redLabel.text = "\(Int(redSlider.value)) = (\(redSlider.value/255))"
-        greenLabel.text = "\(Int(greenSlider.value)) = (\(greenSlider.value/255))"
-        blueLaabel.text = "\(Int(blueSlider.value)) = (\(blueSlider.value/255))"
+        redLabel.text = "Red \(Int(redSlider.value)) = (\(String(format: "%.3f", redSlider.value/255)))"
+        greenLabel.text = "Green \(Int(greenSlider.value)) = (\(String(format: "%.3f", greenSlider.value/255)))"
+        blueLaabel.text = "Blue \(Int(blueSlider.value)) = (\(String(format: "%.3f", blueSlider.value/255)))"
         view.backgroundColor = UIColor(
             red: CGFloat(redSlider.value/255),
             green: CGFloat(greenSlider.value/255),
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func redSliderAction() {
-        redLabel.text = String("\(Int(redSlider.value)) = (\(redSlider.value/255))")
+        redLabel.text = "Red \(Int(redSlider.value)) = (\(String(format: "%.3f", redSlider.value/255)))"
         view.backgroundColor = UIColor(
             red: CGFloat(redSlider.value/255),
             green: CGFloat(greenSlider.value/255),
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func greenSliderAction() {
-        greenLabel.text = String("\(Int(greenSlider.value)) = (\(greenSlider.value/255))")
+        greenLabel.text = "Green \(Int(greenSlider.value)) = (\(String(format: "%.3f", greenSlider.value/255)))"
         view.backgroundColor = UIColor(
             red: CGFloat(redSlider.value/255),
             green: CGFloat(greenSlider.value/255),
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func blueSliderAction() {
-        blueLaabel.text = String("\(Int(blueSlider.value)) = (\(blueSlider.value/255))")
+        blueLaabel.text = "Blue \(Int(blueSlider.value)) = (\(String(format: "%.3f", blueSlider.value/255)))"
         view.backgroundColor = UIColor(
             red: CGFloat(redSlider.value/255),
             green: CGFloat(greenSlider.value/255),
